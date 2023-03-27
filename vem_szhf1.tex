@@ -57,7 +57,13 @@
         \item $F=170 \; \kN$
     \end{itemize}
 \end{multicols}
+\subsubsection*{A szerkezet ábrája}
 A szerkezet méretarányos ábrája esetünkben az alábbi módon néz ki:
+\begin{figure}[H]
+    \centering
+    \includegraphics{vszhf1_abra.pdf}
+    \caption{A szerkezet léptékhelyes ábrája}
+\end{figure}
 \section{Az elmozduláskomponensek meghatározása}
 \subsection{A csomópontok definiálása}
 Az alábbi táblázatban láthatóak a különböző csomópontok $x$ illetve
@@ -180,7 +186,7 @@ különböző elemek merevségi mátrixait.
 \end{equation}
 \subsubsection*{Így az elemi merevségi mátrixok:}
 \begin{equation}
-    \mx{K}^{1}=\mx{K}^{7}=
+    \mx{K}^{\left(1\right)}=\mx{K}^{\left(7\right)}=
     \begin{bmatrix}
         5.1482 \futyi  &  & 0 &  & -5.1482 \futyi &  & 0      \\
         0              &  & 0 &  & 0              &  & 0 &  & \\
@@ -188,10 +194,55 @@ különböző elemek merevségi mátrixait.
         0              &  & 0 &  & 0              &  & 0 &  &
     \end{bmatrix} \Nm
 \end{equation}
+\begin{equation}
+    \mx{K}^{\left(2\right)}=
+    \begin{bmatrix}
+        11.0711 \futyi  &  & -3.5981 \futyi &  & -11.0711 \futyi &  & 3.5981 \futyi  \\
+        -3.5981 \futyi  &  & 1.1693 \futyi  &  & 3.5981 \futyi   &  & -1.1693 \futyi \\
+        -11.0711 \futyi &  & 3.5981 \futyi  &  & 11.0711 \futyi  &  & -3.5981 \futyi \\
+        3.5981 \futyi   &  & -1.1693 \futyi &  & -3.5981 \futyi  &  & 1.1693 \futyi
+    \end{bmatrix} \Nm
+\end{equation}
+\begin{equation}
+    \mx{K}^{\left(3\right)}=
+    \begin{bmatrix}
+        8.0098 \futyi  &  & 1.7354 \futyi  &  & -8.0098 \futyi &  & -1.7354 \futyi \\
+        1.7354 \futyi  &  & 0.3760 \futyi  &  & -1.7354 \futyi &  & -0.3760 \futyi \\
+        -8.0098 \futyi &  & -1.7354 \futyi &  & 8.0098 \futyi  &  & 1.7354 \futyi  \\
+        -1.7354 \futyi &  & -0.3760 \futyi &  & 1.7354 \futyi  &  & 0.3760 \futyi
+    \end{bmatrix} \Nm
+\end{equation}
+\begin{equation}
+    \mx{K}^{\left(4\right)}=
+    \begin{bmatrix}
+        0 &  & 0               &  & 0 &  & 0              \\
+        0 &  & 19.8011 \futyi  &  & 0 &  & -19.801 \futyi \\
+        0 &  & 0               &  & 0 &  & 0              \\
+        0 &  & -19.8011 \futyi &  & 0 &  & 19.801 \futyi
+    \end{bmatrix} \Nm
+\end{equation}
+\begin{equation}
+    \mx{K}^{\left(5\right)}=
+    \begin{bmatrix}
+        11.0711 \futyi  &  & 3.5981 \futyi  &  & -11.0711 \futyi &  & -3.5981 \futyi \\
+        3.5981 \futyi   &  & 1.1693 \futyi  &  & -3.5981 \futyi  &  & -1.1693 \futyi \\
+        -11.0711 \futyi &  & -3.5981 \futyi &  & 11.0711 \futyi  &  & 3.5981 \futyi  \\
+        -3.5981 \futyi  &  & -1.1693 \futyi &  & 3.5981 \futyi   &  & 1.1693 \futyi
+    \end{bmatrix} \Nm
+\end{equation}
+\begin{equation}
+    \mx{K}^{\left(6\right)}=
+    \begin{bmatrix}
+        8.0098 \futyi  &  & -1.7354 \futyi &  & -8.0098 \futyi &  & 1.7354 \futyi  \\
+        -1.7354 \futyi &  & 0.3760 \futyi  &  & 1.7354 \futyi  &  & -0.3760 \futyi \\
+        -8.0098 \futyi &  & 1.7354 \futyi  &  & 8.0098 \futyi  &  & -1.7354 \futyi \\
+        1.7354 \futyi  &  & -0.3760 \futyi &  & -1.7354 \futyi &  & 0.3760 \futyi
+    \end{bmatrix} \Nm
+\end{equation}
 \subsubsection{Elemi elmozdulásvektorok meghatározása}
 Az elemi elmozdulásvektor alakja minden esetben az alábbi módon néz ki:
 \begin{equation}
-    \vec{U}^{\i}=
+    \vec{\mathbf{U}}^{\i}=
     \begin{bmatrix}
         {u_1}^{\i} \\
         {v_1}^{\i} \\
